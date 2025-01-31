@@ -96,6 +96,16 @@ git push origin master:main --force
 brew install git
 ```
 
+**确保 Homebrew 路径优先于系统路径：**
+
+```
+export PATH="/usr/local/bin:/opt/homebrew/bin:$PATH"
+```
+
+确保 `/usr/local/bin` 和 `/opt/homebrew/bin`(M1,M2 silicon)（Homebrew 安装软件的路径）会被优先检查，而不是`/usr/bin/git`
+
+
+
 **创建ssh key**
 
 ```csharp
@@ -104,8 +114,6 @@ git config --global user.email "alexander_lxy@outlook.com"
 ```
 
 - Secure Shell Key 公钥 (Public Key): 这是可以公开的密钥，通常将它添加到你要连接的服务器上的 `~/.ssh/authorized_keys` 文件中。公钥用于加密数据。**私钥 (Private Key)**: 私钥是保密的，只应存储在客户端计算机上，用来解密数据。只有拥有相应私钥的人才能通过公钥进行身份验证。
-
-
 
 
 
