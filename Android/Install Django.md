@@ -2,18 +2,63 @@
 
 ------
 
-#### 虚拟环境搭建
 
-**创建虚拟环境和安装依赖**
+
+### Check if Python is Install
+
+https://www.python.org/downloads/macos/   OR
+
+```
+brew install python@3.12
+
+alias python=/usr/local/bin/python3
+
+pip3 list
+```
+
+
+
+### Creat a Virtual Environment 
+
+```
+pip install virtualenv
+python -m venv myenv
+```
+
+
+
+### Activate the Virtual Environment
+
+```
+source myenv/bin/activate
+```
+
+
+
+### Install Django, DRF, and MySQL driver
+
+```
+pip install django djangorestframework mysqlclient
+```
+
+
+
+
 
 ```bash
-# 创建虚拟环境并激活
+# 创建虚拟环境
 python -m venv myenv
+
+激活
 source myenv/bin/activate  # macOS/Linux
 
 # 安装 Django、DRF 和 MySQL 驱动
 pip install django djangorestframework mysqlclient
 ```
+
+安装 Django、DRF 和 MySQL 驱动
+
+
 
 **创建 Django 项目和应用**
 
